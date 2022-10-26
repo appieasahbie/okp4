@@ -1,17 +1,17 @@
 # Migrate your validator to another machine
 
-### 1. Run a new full node on a new machine
-To setup full node you can follow my guide [okp4 node setup for testnet](https://github.com/kj89/testnet_manuals/blob/main/okp4/README.md)
+### 1. install the testnet on your new server
+To install testnet node from here [okp4 testnet guide](https://github.com/appieasahbie/okp4)
 
 ### 2. Confirm that you have the recovery seed phrase information for the active key running on the old machine
 
-#### To backup your key
+#### backup your key
 ```
 okp4d keys export mykey
 ```
 > _This prints the private key that you can then paste into the file `mykey.backup`_
 
-#### To get list of keys
+#### get list of keys
 ```
 okp4d keys list
 ```
