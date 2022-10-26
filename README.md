@@ -42,7 +42,7 @@ Any contributor earns rewards thanks to these new value chains.
 ### 1-ɪɴᴛᴀʟʟᴀᴛɪᴏɴ ᴏɴᴇ ᴛɪᴍᴇ (ꜱᴄʀɪᴘᴛ ᴀᴜᴛᴏᴍᴀᴛɪᴄ ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ)
 
 
-      wget -O okp4.sh https://raw.githubusercontent.com/appieasahbie/main/okp4/okp4.sh && chmod +x okp4.sh && ./okp4.sh
+      wget -O okp4.sh https://raw.githubusercontent.com/appieasahbie/okp4/main/okp4.sh && chmod +x okp4.sh && ./okp4.sh
       
       
 
