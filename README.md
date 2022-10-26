@@ -1,6 +1,22 @@
 # Okp4 Node Setup :
 
 
+![download](https://user-images.githubusercontent.com/108979536/198153396-8bc7304c-a5d2-4b10-a9bb-13e52ba5afd0.jpg)
+
+### OKP4 Protocol
+OKP4 is a domain-specific layer-1 dedicated to trust-minimized data sharing.
+The blockchain orchestrates assets shared by participants into the Dataverse: data, algorithms, software, storage and computation to enable a new generation of applications.
+Any contributor earns rewards thanks to these new value chains.
+
+# Official links :
+
+  + Discord : [link](https://discord.gg/d6QfUzHR)
+
+  + Website : [link](https://okp4.network/)
+
+  + Twitter : [link](https://twitter.com/OKP4_Protocol)
+
+  + Github : [link](https://github.com/okp4)
 
 
 
