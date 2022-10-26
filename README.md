@@ -99,9 +99,9 @@ Any contributor earns rewards thanks to these new value chains.
       --website="" -y
       
  
- ### Snapchot optional (nodejumber)
+ # Snapchot optional (nodejumber)
  
-   # install dependencies, if needed
+   ### install dependencies, if needed
    
       sudo apt update
       sudo apt install lz4 -y
