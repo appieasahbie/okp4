@@ -97,7 +97,7 @@ Any contributor earns rewards thanks to these new value chains.
       --moniker <moniker> \
       --chain-id okp4-nemeton \
       --fees 550uknow
-      --y
+      -y
  # Snapchot optional (nodejumber)
  
    ### install dependencies, if needed
