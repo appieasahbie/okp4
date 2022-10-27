@@ -85,6 +85,8 @@ Any contributor earns rewards thanks to these new value chains.
 
 ### Create validator (after recieving of tokens )
 
+ + replace <wallet> with your wallet name and <moniker> with your validator name
+
       okp4d tx staking create-validator \
       --amount 1000000uknow \
       --from <wallet> \
