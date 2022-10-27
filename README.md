@@ -99,7 +99,7 @@ Any contributor earns rewards thanks to these new value chains.
       --identity="" \
       --details="" \
       --website="" -y
-      
+      --fees 550uknow
  
  # Snapchot optional (nodejumber)
  
