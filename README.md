@@ -96,11 +96,8 @@ Any contributor earns rewards thanks to these new value chains.
       --pubkey  $(okp4d tendermint show-validator) \
       --moniker <moniker> \
       --chain-id okp4-nemeton \
-      --identity="" \
-      --details="" \
-      --website="" -y
       --fees 550uknow
- 
+      --y
  # Snapchot optional (nodejumber)
  
    ### install dependencies, if needed
