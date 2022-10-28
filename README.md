@@ -89,20 +89,15 @@ Any contributor earns rewards thanks to these new value chains.
   
 
          okp4d tx staking create-validator \
-         --amount=1000000uknow \
-         --pubkey=$(okp4d tendermint show-validator) \
-         --moniker=$MONIKER \
-         --chain-id=okp4-nemeton \
-         --commission-rate=0.10 \
-         --commission-max-rate=0.20 \
-         --commission-max-change-rate=0.01 \
-         --min-self-delegation=1 \
-         --from=$WALLET \
-         --gas-prices=0.1uknow \
-         --gas-adjustment=1.5 \
-         --gas=auto \
-         --fees 550uknow
-         -y
+         --amount 100000uknow \
+         --from WALLETNAME \
+         --commission-max-change-rate "0.01" \
+         --commission-max-rate "0.2" \
+         --commission-rate "0.05" \
+         --min-self-delegation "1" \
+         --pubkey  $(okp4d tendermint show-validator) \
+         --moniker NODENAME \
+         --chain-id okp4-nemeton’
   
   
  # Snapchot optional (nodejumber)
