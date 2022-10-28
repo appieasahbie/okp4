@@ -183,6 +183,15 @@ Any contributor earns rewards thanks to these new value chains.
 
    sudo journalctl -u okp4d -f --no-hostname -o cat     
 
+### Delete the node 
+
+   sudo systemctl stop okp4d
+   sudo systemctl disable okp4d
+   sudo rm /etc/systemd/system/okp4* -rf
+   sudo rm $(which okp4d) -rf
+   sudo rm $HOME/.okp4d* -rf
+   sudo rm $HOME/okp4 -rf
+   sed -i '/OKP4_/d' ~/.bash_profile
     
 [buy me a cup of coffe ](https://www.paypal.com/paypalme/AbdelAkridi?country.x=NL&locale.x=en_US)   
      
