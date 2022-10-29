@@ -71,6 +71,10 @@ Any contributor earns rewards thanks to these new value chains.
  
         okp4d keys add $WALLET --recover
         
+  + show keys 
+  
+        okp4d keys list
+        
 ### Add wallet and valoper address and load variables into the system
 
         OKP4_WALLET_ADDRESS=$(okp4d keys show $WALLET -a)
