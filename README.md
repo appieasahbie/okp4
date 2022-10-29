@@ -87,7 +87,7 @@ Any contributor earns rewards thanks to these new value chains.
 ### Fund your wallet (to create validator) [link faucet](https://faucet.okp4.network)
 
 
-### Create validator (after recieving of tokens )
+### Create validator (after recieving of tokens and must important sync is false)
 
   + replace <wallet> with your wallet name and <moniker> with your validator name
   
