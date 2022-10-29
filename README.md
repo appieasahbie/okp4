@@ -101,7 +101,7 @@ Any contributor earns rewards thanks to these new value chains.
          --min-self-delegation "1" \
          --pubkey  $(okp4d tendermint show-validator) \
          --moniker NODENAME \
-         --chain-id okp4-nemeton’
+         --chain-id okp4-nemeton
   
   
  # Snapchot optional (nodejumber)
