@@ -104,28 +104,29 @@ Any contributor earns rewards thanks to these new value chains.
          --chain-id okp4-nemeton
   
   
- # Snapchot optional (nodejumber)
+ # Snapchot optional (PPNV)
  
    ### install dependencies, if needed
    
-      sudo apt update
-      sudo apt install lz4 -y
-      
       sudo systemctl stop okp4d
-
       cp $HOME/.okp4d/data/priv_validator_state.json $HOME/.okp4d/priv_validator_state.json.backup
-      okp4d tendermint unsafe-reset-all --home $HOME/.okp4d --keep-addr-book
-
-      rm -rf $HOME/.okp4d/data 
-      rm -rf $HOME/.okp4d/wasm
-
-      SNAP_NAME=$(curl -s https://snapshots2-testnet.nodejumper.io/okp4-testnet/ | egrep -o ">okp4-nemeton.*\.tar.lz4" | tr -d ">")
-      curl https://snapshots2-testnet.nodejumper.io/okp4-testnet/${SNAP_NAME} | lz4 -dc - | tar -xf - -C $HOME/.okp4d
-
+      okp4d tendermint unsafe-reset-all --home $HOME/.okp4d
+      STATE_SYNC_RPC=http://rpc.okp.ppnv.space:36657
+      STATE_SYNC_PEER=be9841ace1d71a4c7681918ee39f5e00d8e96a82@rpc.okp.ppnv.space:36656
+      LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
+      SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 1000))
+      SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+      sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/.okp4d/config/config.toml
+      sed -i.bak -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
+      $HOME/.okp4d/config/config.toml
+      sed -i.bak -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
+      $HOME/.okp4d/config/config.toml
+      sed -i.bak -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
+      $HOME/.okp4d/config/config.toml
+      sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
+      $HOME/.okp4d/config/config.toml
       mv $HOME/.okp4d/priv_validator_state.json.backup $HOME/.okp4d/data/priv_validator_state.json
-
-     sudo systemctl restart okp4d
-     sudo journalctl -u okp4d -f --no-hostname -o cat
+      sudo systemctl restart okp4d && journalctl -u okp4d -f --no-hostname -o cat
 
 
 
